@@ -1,7 +1,7 @@
 import requests
 import pprint
 
-characterID=1303
+characterID=1301
 url = f"https://www.anapioficeandfire.com/api/characters/{characterID}"
 
 
