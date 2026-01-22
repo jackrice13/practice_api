@@ -1,21 +1,20 @@
 import requests
 import pprint
 
-characterID=1301
-url = f"https://www.anapioficeandfire.com/api/characters/{characterID}"
+def get_char_name(character_id):
+    characterID=1303
+    url = f"https://www.anapioficeandfire.com/api/characters/{character_id}"
 
 
-response = requests.get(url)
-data = response.json()
-# HouseName = (data["name"])
-# HouseWords = (data["words"])
-# HouseRegion = (data["region"])
-# HouseCoatOfArms = (data["coatOfArms"])
+    response = requests.get(url)
+    data = response.json()
+    charName = (data["name"])
+    return charName
 
 #print(type(data))
-# print(HouseName)
+#print(characterName)
 # print(HouseWords)
-pprint.pprint(data)
+#pprint.pprint(data)
 
 # with open("HouseData.csv", "w") as f:
 #   f.write("House Name,House Words,House Region,House Coat Of Arms\n")

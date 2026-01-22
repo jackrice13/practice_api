@@ -1,6 +1,6 @@
 import requests
 import pprint
-from data import data
+from HousedataSample import data
 
 # url= "https://sandbox.zestfuldata.com/parseIngredients"
 #
