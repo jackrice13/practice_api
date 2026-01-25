@@ -2,14 +2,18 @@ import requests
 import pprint
 
 def get_char_name(character_id):
-    characterID=1303
+    if not character_id:
+        return "No Lord Found"
     url = f"https://www.anapioficeandfire.com/api/characters/{character_id}"
 
-
-    response = requests.get(url)
-    data = response.json()
-    charName = (data["name"])
-    return charName
+    try:
+        response = requests.get(url)
+        data = response.json()
+        charName = (data["name"])
+        return charName
+    except Exception as e:
+       print(f"Error fetching character {character_id}: {e}")
+       return "Error fetching name"
 
 #print(type(data))
 #print(characterName)
